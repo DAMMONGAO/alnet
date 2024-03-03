@@ -2,10 +2,18 @@ This is the PyTorch implementation of our paper "ALNet: An Adaptive Attention Ne
 
 ![overall](https://github.com/DAMMONGAO/alnet/tree/main/ALNet/assets)
 
+# video
+(https://github.com/DAMMONGAO/alnet/issues/1#issue-2165325963)
+
+
 # Installation
 Firstly, we need to set up python3 environment from requirement.txt:
 
 ```bash
+
+https://github.com/DAMMONGAO/alnet/assets/81282863/d074e1a0-5dfc-42ba-a19d-aaa4d87a851e
+
+
 pip3 install -r requirement.txt 
 ```
 
