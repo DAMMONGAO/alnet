@@ -161,6 +161,87 @@ class Desimilar_block(nn.Module):
         out = F.interpolate(out, size=[H*self.up_sample,W*self.up_sample], mode='bilinear', align_corners=False)
         return out
 
+# the other Desimilar_block
+# class Desimilar_block(nn.Module):
+#     def __init__(self, exp_size, top_number, c, down_sample, up_sample, se=None):
+#         super(Desimilar_block, self).__init__()
+#         self.conv = SENet(2*c, c, stride=1, padding=1, kernel_size=3) 
+#         ##
+#         self.conv_se = SENet(c, c, stride=1, padding=0, kernel_size=1) 
+#         self.se = se
+#         ##
+#         self.conv_down = conv(c, c, stride=down_sample, padding=0, kernel_size=down_sample)
+#         # self.conv_down = conv(512, 512, stride=2, padding=1, kernel_size=3)
+#         self.exp_size = exp_size
+#         self.top_number = top_number
+#         self.up_sample = up_sample
+#     ###
+#     def make_i(self, i, exp_size):
+#         win_size = 2*exp_size+1
+#         t = torch.ones((win_size,win_size))
+#         # print(t.shape)
+#         for m in range(0,win_size):
+#             t[m,:] = i-exp_size+m
+#         t = t[None,:,:].repeat(1,1,1).reshape(1,win_size*win_size)
+#         return t #1 25
+#     ###
+#     def make_j(self, j, exp_size):
+#         win_size = 2*exp_size+1
+#         t = torch.ones((win_size,win_size))
+#         for m in range(0,win_size):
+#             t[:,m] = j-exp_size+m
+#         t = t[None,:,:].repeat(1,1,1).reshape(1,win_size*win_size)
+#         return t #1 25
+#     ###
+#     def get_feat(self, feat, exp_size, top_number):
+#         B,C,H,W = feat.shape
+#         L = H*W
+#         window_size = 2*exp_size+1
+#         x1 = feat.reshape(B,C,L)
+#         similarity_matrix = torch.einsum('nci,ncj->nij', x1, x1)
+#         similarity_matrix = similarity_matrix.reshape(B,L,H,W)
+#         padding_size = (exp_size,exp_size,exp_size,exp_size) 
+#         pad_simi_matrix = F.pad(similarity_matrix, padding_size,'constant',1e20)
+#         b_index = torch.arange(B)[:,None,None].repeat(1,L,window_size**2)
+#         l_index = torch.arange(L)[None,:,None].repeat(B,1,window_size**2)
+#         I = torch.cat([self.make_i(i, exp_size) for i in range(exp_size,H+exp_size)],dim=0)
+#         i_index = I[None,:,None,:].repeat(B,1,W,1).reshape(B,L,window_size**2)
+#         J = torch.cat([self.make_j(j, exp_size) for j in range(exp_size,W+exp_size)],dim=0)
+#         j_index = J[None,None,:,:].repeat(B,H,1,1).reshape(B,L,window_size**2)
+#         win_value = pad_simi_matrix[b_index.long(),l_index.long(),i_index.long(),j_index.long()]
+#         top_values, top_indices = torch.topk(win_value,k=top_number,dim=2,largest=False)
+#         h_bias = top_indices // window_size-exp_size
+#         w_bias = top_indices %  window_size-exp_size
+#         center = torch.arange(L)[None, :, None].repeat(B, 1, top_number).to(h_bias.device)
+#         H_f = center // W + h_bias
+#         W_f = center % W + w_bias
+#         index = H_f * W + W_f
+#         x_stron = x1.permute(0,2,1)
+#         x_stron = x_stron[:,:,None,:].repeat(1,1,L,1)
+#         a_index = torch.arange(B)[:,None,None].repeat(1,L,top_number)
+#         b_index = torch.arange(L)[None,:,None].repeat(B,1,top_number)
+#         x_final = x_stron[a_index.long(),b_index.long(),index.long(),:] ##4*4800*9*c
+#         return x_final
+#     ##
+#     def forward(self, x): ##x: n c h w 
+#         x1 = self.conv_down(x)
+#         ##
+#         if self.se is not None:
+#             x1 = self.conv_se(x1)
+#         ##
+#         B,C,H,W = x1.shape
+#         L = H*W
+#         out_1 = self.get_feat(x1, self.exp_size, self.top_number)
+#         out_0 = x1.reshape(B,C,L).permute(0,2,1) 
+#         out_0 = out_0[:,:,None,:].repeat(1,1,1,1) 
+#         out = out_1 - out_0
+#         out = torch.mean(out, dim=2, keepdim=False) 
+#         out = out.permute(0,2,1).reshape(B,-1,H,W)
+#         out = torch.cat((x1, out), dim=1)
+#         out = self.conv(out)
+#         out = F.interpolate(out, size=[H*self.up_sample,W*self.up_sample], mode='bilinear', align_corners=False)
+#         return out
+
 class att_layer(nn.Module):
     def __init__(self, in_chan, out_chan):
         super(att_layer, self).__init__()
