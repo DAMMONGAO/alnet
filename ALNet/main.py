@@ -48,7 +48,7 @@ if __name__ == '__main__':
     parser.add_argument('--n_epoch', nargs='?', type=int, default=5000,
                         help='the number of epoch to train')
     parser.add_argument('--output', nargs='?', type=str, default='./',
-                        help='Output directory')        # 误差文件保存路径
+                        help='Output directory')       
     args = parser.parse_args()
 
     if args.dataset == '7S':
