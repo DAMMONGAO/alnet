@@ -1,9 +1,10 @@
 This is the PyTorch implementation of our paper "ALNet: An Adaptive Attention Network with Local Discrepancy Perception for Accurate Indoor Visual Localization".
 
-![overall](https://github.com/DAMMONGAO/alnet/tree/main/ALNet/assets)
+![overall](https://github.com/DAMMONGAO/alnet/assets/81282863/fbf01dd1-7a30-49ad-ba15-bb5744c4667f)
 
 # video
-(https://github.com/DAMMONGAO/alnet/issues/1#issue-2165325963)
+Here is the video in a real scene:
+https://github.com/DAMMONGAO/alnet/assets/81282863/48fce2d9-2908-49e6-92cb-586ce9c72f3f
 
 
 # Installation
