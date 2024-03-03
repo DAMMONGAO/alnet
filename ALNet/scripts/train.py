@@ -89,10 +89,8 @@ def train(args):
                   (epoch, _, total_loss, total_loss, accuracy, end - start))
         print(f"Epoch{epoch}| Loss: {np.mean(loss_list)}| Acc:{np.mean(corr_list)} ")
         if epoch>=100:
-            sys.path.append('/home/dk/ghb/EAAINet/pnpransac')
+            sys.path.append('/home/dk/ghb/ALNet/pnpransac')
             # sys.path.insert(0, '/home/ghb/EAAINet/pnpransac')
-            from pnpransac import pnpransac
-            print('okkkk')
             intrinsics_color = test_dataset.intrinsics_color   
             pose_solver = pnpransac.pnpransac(intrinsics_color[0,0], intrinsics_color[1,1], intrinsics_color[0,2], intrinsics_color[1,2])
             model.eval()
