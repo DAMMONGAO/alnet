@@ -4,7 +4,7 @@ This is the PyTorch implementation of our paper "ALNet: An Adaptive Attention Ne
 
 # video
 Here is the video in a real scene:
-https://github.com/DAMMONGAO/alnet/assets/81282863/48fce2d9-2908-49e6-92cb-586ce9c72f3f
+(https://github.com/DAMMONGAO/alnet/assets/81282863/48fce2d9-2908-49e6-92cb-586ce9c72f3f)
 
 
 # Installation
