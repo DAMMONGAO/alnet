@@ -1,4 +1,4 @@
-This is the PyTorch implementation of our paper "EAAINet: An Element-wise Attention Network with Global Affinity Information for Accurate Indoor Visual Localization".
+This is the PyTorch implementation of our paper "ALNet: An Adaptive Attention Network with Local Discrepancy Perception for Accurate Indoor Visual Localization".
 
 ![overall](https://raw.githubusercontent.com/DK-HU/EAAINet/main/assets/overall.png)
 
