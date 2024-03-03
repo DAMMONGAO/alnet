@@ -1,0 +1,14 @@
+#CUDA_VISIBLE_DEVICES=0 python main.py --model multi_scale_trans --dataset 7S --scene pumpkin --data_path ./data/ --flag train --n_epoch 3000 #0.04
+#CUDA_VISIBLE_DEVICES=1 python main.py --model multi_scale_trans --dataset 7S --scene pumpkin --data_path ./data/ --flag train --n_epoch 3000 #0.04
+#python main.py --model multi_scale_trans --dataset 7S --scene redkitchen --data_path ./data/ --flag test --resume /mnt/share/sda1/modelghb/redkitchen/epoch177_acc80.5_trans0.03177937632341402_rot0.9964039129238975.pth
+#python main.py --model multi_scale_trans --dataset 7S --scene pumpkin --data_path ./data/ --flag test --resume "/mnt/share/sda1/modelghb/12s/pumpkin/epoch280_acc70.95_trans0.033758924189510875_rot1.009799924282091.pth"
+#python main.py --model multi_scale_trans --dataset 7S --scene stairs --data_path ./data/ --flag test --resume "/mnt/share/sda1/modelghb/12s/stairs/epoch613_acc87.8_trans0.035845541935166286_rot0.9559096166396459.pth"
+#python main.py --model multi_scale_trans --dataset 7S --scene stairs --data_path ./data/ --flag test --resume "/mnt/share/sda1/modelghb/12s/xiaorong/epoch251_acc59.599999999999994_trans0.044800495086382036_rot1.2217949006688527.pth"
+#python main.py --model multi_scale_trans --dataset 7S --scene chess --data_path ./data/ --flag test --resume '/mnt/share/sda1/modelghb/chess/epoch193_acc98.05_trans0.019199400379674866_rot0.6640779218840986.pth'
+#python main.py --model multi_scale_trans --dataset 7S --scene redkitchen --data_path ./data/ --flag test --resume "/mnt/share/sda1/modelghb/12s/redkitchen/epoch309_acc79.44_trans0.034938254715962146_rot1.0784404297523555.pth"
+#python main.py --model multi_scale_trans --dataset 7S --scene stairs --data_path ./data/ --flag test --resume "/mnt/share/sda1/modelghb/stairs/epoch646_acc77.10000000000001_trans0.03714217752599089_rot1.0133433373446648.pth"
+#python main.py --model multi_scale_trans --dataset 7S --scene fire --data_path ./data/ --flag test --resume "/mnt/share/sda1/modelghb/fire/epoch103_acc98.35000000000001_trans0.019766221173553082_rot0.813933374294874.pth"
+# CUDA_VISIBLE_DEVICES=0 python main.py --model multi_scale_trans --dataset 7S --scene heads --data_path ./data/ --flag test --resume "/mnt/share/sda1/modelghb/heads/epoch160_acc99.9_trans0.014872046699456923_rot0.9745323313949811.pth"
+#CUDA_VISIBLE_DEVICES=0 python main.py --model multi_scale_trans --dataset 7S --scene office --data_path ./data/ --flag test --resume "/mnt/share/sda1/modelghb/office/epoch287_acc90.60000000000001_trans0.023098027757037586_rot0.6866771068250467.pth"
+#CUDA_VISIBLE_DEVICES=1 python main.py --model multi_scale_trans --dataset my --scene K544 --data_path ./data/ --flag train --n_epoch 3000
+python main.py --model multi_scale_trans --dataset my --scene K544 --data_path ./data/ --flag test --resume "/mnt/share/sda1/modelghb/12s/K544/epoch330_acc15.377697841726617_trans0.12341727106744899_rot1.0769886119285688.pth"
