@@ -30,7 +30,7 @@ We utilize two standard datasets (i.e, 7-Scenes and 12-Scenes) to evaluate our m
 - 12-Scenes: The 12-Scenes dataset can be downloaded from [12-Scenes](https://graphics.stanford.edu/projects/reloc/).
 
 # Evaluation
-The pre-trained models can be downloaded from [7-Scenes](https://1drv.ms/u/s!AsLK4P4ia2R9biMdEyi_uQ-0No0?e=kLSPnh) and [12-Scenes](https://1drv.ms/u/s!AsLK4P4ia2R9bzafAEnZlrXiXsU?e=KF0AyW).
+The pre-trained models can be downloaded from [7-Scenes](https://1drv.ms/f/s!Aln-nNBY3wXyaK5NNluyMMf-WJo?e=vpX9cb) and [12-Scenes](https://1drv.ms/u/s!AsLK4P4ia2R9bzafAEnZlrXiXsU?e=KF0AyW).
 Then, we can run train_7S.sh or train_12S.sh to evaluate ALNet on 7-Scenes and 12-Scenes datasets. 
 ```bash
 bash train_7S.sh
