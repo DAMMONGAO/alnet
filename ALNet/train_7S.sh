@@ -1,5 +1,5 @@
-#CUDA_VISIBLE_DEVICES=0 python main.py --model multi_scale_trans --dataset 7S --scene pumpkin --data_path ./data/ --flag train --n_epoch 3000 #0.04
-#CUDA_VISIBLE_DEVICES=1 python main.py --model multi_scale_trans --dataset 7S --scene pumpkin --data_path ./data/ --flag train --n_epoch 3000 #0.04
+#CUDA_VISIBLE_DEVICES=0 python main.py --model multi_scale_trans --dataset 7S --scene pumpkin --data_path ./data/ --flag train --n_epoch 3000 
+#CUDA_VISIBLE_DEVICES=1 python main.py --model multi_scale_trans --dataset 7S --scene pumpkin --data_path ./data/ --flag train --n_epoch 3000 
 #python main.py --model multi_scale_trans --dataset 7S --scene redkitchen --data_path ./data/ --flag test --resume /mnt/share/sda1/modelghb/redkitchen/epoch177_acc80.5_trans0.03177937632341402_rot0.9964039129238975.pth
 #python main.py --model multi_scale_trans --dataset 7S --scene pumpkin --data_path ./data/ --flag test --resume "/mnt/share/sda1/modelghb/12s/pumpkin/epoch280_acc70.95_trans0.033758924189510875_rot1.009799924282091.pth"
 #python main.py --model multi_scale_trans --dataset 7S --scene stairs --data_path ./data/ --flag test --resume "/mnt/share/sda1/modelghb/12s/stairs/epoch613_acc87.8_trans0.035845541935166286_rot0.9559096166396459.pth"
