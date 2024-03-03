@@ -7,6 +7,10 @@ Here is the video in a real scene:
 (https://github.com/DAMMONGAO/alnet/assets/81282863/48fce2d9-2908-49e6-92cb-586ce9c72f3f)
 
 
+![real](https://github.com/DAMMONGAO/alnet/assets/81282863/86c77b4c-7789-431c-b77c-e2d143ae562b)
+
+
+
 # Installation
 Firstly, we need to set up python3 environment from requirement.txt:
 
