@@ -7,7 +7,9 @@ Here is the video in a real scene:
 
 https://github.com/DAMMONGAO/alnet/assets/81282863/fbf521e8-bd67-419b-ba14-90c1885cae52
 
+Here is the video in Pumpkin of 7Scenes Dataset
 
+https://github.com/DAMMONGAO/alnet/assets/81282863/da698652-b37c-45c3-a07f-7dd37226e306
 
 # Installation
 Firstly, we need to set up python3 environment from requirement.txt:
