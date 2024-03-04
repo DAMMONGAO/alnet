@@ -3,6 +3,7 @@ This is the PyTorch implementation of our paper "ALNet: An Adaptive Attention Ne
 ![overall](https://github.com/DAMMONGAO/alnet/assets/81282863/fbf01dd1-7a30-49ad-ba15-bb5744c4667f)
 
 # video
+We make videos of the results of the experiments. The RGB image is on the left side of the video screen, the predicted trajectory and ground truth trajectory are in the middle, and the uncertainty is on the right.
 Here is the video in a real scene:
 
 https://github.com/DAMMONGAO/alnet/assets/81282863/fbf521e8-bd67-419b-ba14-90c1885cae52
